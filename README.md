@@ -11,8 +11,10 @@
     const parseImg = (img) => {
         switch (img) {
             case 'Same.gif': return 0;
-            case 'Plus.gif': return 1;
-            case 'Min.gif': return -1;
+            case 'Plus.gif':
+            case 'Up.gif': return 1;
+            case 'Min.gif':
+            case 'Down.gif': return -1;
         }
     }
     const parseImgArr = (imgArr) => imgArr.reduce((total, img) => total + parseImg(img), 0);
